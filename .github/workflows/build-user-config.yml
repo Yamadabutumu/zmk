@@ -108,7 +108,7 @@ jobs:
             /tmp/zmk-config/zephyr/
             /tmp/zmk-config/bootloader/
             /tmp/zmk-config/zmk/
-          key: ${{ runner.os }}-build-${{ env.cache_name }}-${{ hashFiles('**/west.yml', '**/build.yaml') }}
+          key: ${{ runner.os }}-build-${{ env.cache_name }}-${{ hashFiles('**/west.yml', '**/build.yaml', '**/config/*') }}
           restore-keys: |
             ${{ runner.os }}-build-${{ env.cache_name }}-
             ${{ runner.os }}-build-
